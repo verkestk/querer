@@ -1,6 +1,8 @@
 # querer&nbsp;[![Build Status](https://travis-ci.org/verkestk/querer.svg?branch=master)](https://travis-ci.org/verkestk/querer)&nbsp;[![godoc reference](https://godoc.org/github.com/verkestk/querer?status.png)](https://godoc.org/github.com/verkestk/querer)
 
-Querer is a golang package for populating a struct based on URL query string values.
+**querer**, _Spanish_, to want, to love, to wish, to like
+
+Querer is a golang package for when you _want_ to populate a struct based on URL query string values.
 
 ## Usage
 
@@ -27,7 +29,7 @@ if err != nil {
 
 ### Basic Types
 
-This package currenty supports:
+This package currently supports:
 
 - bool
 - int
@@ -40,7 +42,7 @@ If you have a need for more types, please open an issue or - even better - a pul
 
 ### Embedded/Anonymous Structs
 
-Embeeded/anonymous structs are also supported. For example.
+Embedded/anonymous structs are also supported. For example.
 
 ```
 type baseParams struct {
