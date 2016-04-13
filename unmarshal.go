@@ -22,17 +22,6 @@ type params struct {
 	LastName string    `query:"last_name"`
 }
 
-	query := url.Values(map[string][]string{
-		"float64_0":     []string{"0"},
-		"float64_1":     []string{"1"},
-		"float64_n1":    []string{"-1"},
-		"float64_Empty": []string{""},
-	})
-
-
-params := new(params)
-err := UnmarshalQuery(params, req.URL.Query())
-
 var (
 	valueKindFunctions = map[reflect.Kind]func(strValue string) (*reflect.Value, error){
 		reflect.Bool:    getBoolValue,
