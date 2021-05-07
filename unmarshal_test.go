@@ -365,27 +365,27 @@ func Test_Time(t *testing.T) {
 
 func Test_Anonmyous(t *testing.T) {
 
-	type timeStruct struct {
+	type TimeStruct struct {
 		Time time.Time `query:"time"`
 	}
 
-	type floatStruct struct {
-		*timeStruct
+	type FloatStruct struct {
+		*TimeStruct
 		Float64 float64 `query:"float64"`
 	}
 
-	type uintStruct struct {
-		*floatStruct
+	type UintStruct struct {
+		*FloatStruct
 		UInt uint `query:"uint"`
 	}
 
-	type intStruct struct {
-		*uintStruct
+	type IntStruct struct {
+		*UintStruct
 		Int int `query:"int"`
 	}
 
-	type paramStruct struct {
-		intStruct
+	type ParamStruct struct {
+		IntStruct
 		Bool bool `query:"bool"`
 	}
 
@@ -397,7 +397,7 @@ func Test_Anonmyous(t *testing.T) {
 		"time":    []string{"2014-08-18"},
 	})
 
-	params := new(paramStruct)
+	params := new(ParamStruct)
 	err := UnmarshalQuery(params, query)
 
 	if err != nil {

@@ -1,4 +1,4 @@
-// package querer provides a way to take a url.Values (struct representation of a query string)
+// Package querer provides a way to take a url.Values (struct representation of a query string)
 // and populate a struct. this is all based on struct tags matching querystring keys.
 package querer
 
